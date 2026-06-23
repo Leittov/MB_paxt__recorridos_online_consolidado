@@ -1,3 +1,5 @@
 __pycache__/
 *.pyc
 .env
+sync_dl__recorridos.py
+REFRESH_API_KEY.txt

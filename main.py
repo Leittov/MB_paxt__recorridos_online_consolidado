@@ -97,6 +97,7 @@ def _extract_fields(version_data: Dict, route_meta: Dict) -> Dict:
     return {
         "route_id": v.get("route_id") or route_meta.get("id"),
         "route_name": v.get("route_name") or route_meta.get("name"),
+        "version_id": route_meta.get("version_id"),
         "company": {
             "id": company.get("id"),
             "name": company.get("name"),
