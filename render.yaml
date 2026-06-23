@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: recorridos-online-consolidado
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.11.0"
+      - key: PAXTRACKER_EMAIL
+        sync: false
+      - key: PAXTRACKER_PASSWORD
+        sync: false
+      - key: REFRESH_API_KEY
+        sync: false
